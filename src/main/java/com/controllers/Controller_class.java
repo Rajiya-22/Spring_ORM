@@ -31,14 +31,14 @@ public class Controller_class {
 	}
 	@PostMapping("/insert")
 	public void insert(@RequestBody Student s){
-		dao.insert(s);
+		dao.save(s);
 	}
 	@DeleteMapping("/delete/{id}")
 	public void delete(@PathVariable("id") int id) {
-		dao.delete(id);
+		dao.deleteById(id);
 	}
 	@PutMapping("/update")
 	public void update(@RequestBody Student s) {
-		dao.update(s);
+		dao.save(s);
 	}
 }
